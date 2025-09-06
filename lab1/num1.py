@@ -24,7 +24,7 @@ def measure_algorithm_time(n):
     array = np.random.randint(0,100,n)
 
     tic = time()
-    foo(array) 
+    foo(array) # ф-ция из задания
     toc = time()
 
     return toc - tic
