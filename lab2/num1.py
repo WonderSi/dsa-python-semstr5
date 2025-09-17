@@ -2,6 +2,7 @@ import matplotlib.pyplot as plt
 
 
 def num_one():
+
     x = range(0, 50)
     y = [i * 3 for i in x]
 
@@ -12,8 +13,8 @@ def num_one():
 
     plt.show()
 
-
 def num_two():
+
     x1 = [10, 20, 30]
     y1 = [20, 40, 10]
 
@@ -59,11 +60,26 @@ def num_three():
 
     plt.show()
 
+def num_four():
 
+    x = [1, 4, 5, 6, 7]
+    y = [2, 6, 3, 6, 3]
+
+    plt.plot(x, y, linestyle='dashdot', color='red', marker='o', markerfacecolor='blue', markersize=10) # пытался найти нормальный linestyle, но не нашел подходящий как в примере
+    
+    plt.xlabel('x - axis')
+    plt.ylabel('y - axis')
+    plt.title('Display marker')
+
+    plt.xlim(1, 8)
+    plt.ylim(1, 8)
+
+    plt.show()
 
 if __name__ == '__main__':
     pass
 
     # num_one()
     # num_two()
-    num_three()
+    # num_three()
+    num_four()
