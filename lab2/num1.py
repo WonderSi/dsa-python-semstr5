@@ -76,10 +76,26 @@ def num_four():
 
     plt.show()
 
+def num_five():
+
+    x1 = [3, 4, 6, 7, 9]
+    y1 = [2, 6, 11, 20, 22]
+
+    x2 = [2, 3, 5, 6, 8]
+    y2 = [1, 5, 10, 17, 20]
+
+    plt.scatter(x1, y1, color='red', s=50)
+    plt.scatter(x2, y2, color='blue', marker='*', s=40)
+
+    plt.xlim(0, 10)
+    plt.ylim(0, 30)
+    plt.show()
+
 if __name__ == '__main__':
     pass
 
     # num_one()
     # num_two()
     # num_three()
-    num_four()
+    # num_four()
+    num_five()
