@@ -1,4 +1,6 @@
 import matplotlib.pyplot as plt
+import matplotlib.dates as mdates
+import datetime
 
 
 def num_one():
@@ -91,6 +93,40 @@ def num_five():
     plt.ylim(0, 30)
     plt.show()
 
+def num_six():
+    dates = [
+        datetime.datetime(2016, 10, 3),
+        datetime.datetime(2016, 10, 4),
+        datetime.datetime(2016, 10, 5),
+        datetime.datetime(2016, 10, 6),
+        datetime.datetime(2016, 10, 7)
+    ]
+    values = [772.5, 776.4, 776.5, 776.8, 775.1]
+
+    fig, ax = plt.subplots()
+    ax.plot(dates, values, marker='o', color='red', linewidth=1, markersize=6)
+
+    ax.set_xlabel('Date')
+    ax.set_ylabel('Closing Value')
+    ax.set_title('Closing stock value of Alphabet Inc.')
+
+    ax.xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m-%d'))
+
+    ax.grid(True, alpha=0.7)
+
+    ax.set_xlim(datetime.datetime(2016, 10, 3), datetime.datetime(2016, 10, 7))
+    ax.set_ylim(772.5, 777.0)
+
+    plt.xticks([
+        datetime.datetime(2016, 10, 3),
+        datetime.datetime(2016, 10, 4),
+        datetime.datetime(2016, 10, 5),
+        datetime.datetime(2016, 10, 6),
+        datetime.datetime(2016, 10, 7)
+    ])
+
+    plt.show()
+
 if __name__ == '__main__':
     pass
 
@@ -98,4 +134,5 @@ if __name__ == '__main__':
     # num_two()
     # num_three()
     # num_four()
-    num_five()
+    # num_five()
+    num_six()
